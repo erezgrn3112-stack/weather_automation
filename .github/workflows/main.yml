@@ -1,0 +1,39 @@
+name: Global Weather Hourly Logger
+
+on:
+  schedule:
+    # פקודת ה-cron הזו אומרת למערכת לרוץ בכל שעה עגולה (0 דקות)
+    - cron: '0 * * * *'
+  workflow_dispatch: # מאפשר לך להריץ את זה ידנית בלחיצת כפתור לבדיקה
+
+jobs:
+  logging-job:
+    runs-on: ubuntu-latest # המכונה שתריץ את הקוד בענן
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install Poetry
+        run: pipx install poetry
+
+      - name: Install Dependencies
+        run: poetry install --no-root
+
+      - name: Run Weather Script
+        env:
+          # כאן אנחנו מחברים את המפתח שהגדרת ב-Secrets לקוד
+          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
+        run: poetry run python main.py
+
+      - name: Commit and Push Results
+        run: |
+          git config --global user.name "Weather-Bot"
+          git config --global user.email "actions@github.com"
+          git add weather_data.csv
+          git commit -m "Automated weather update [skip ci]" || echo "No changes to commit"
+          git push
