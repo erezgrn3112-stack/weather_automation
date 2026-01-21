@@ -1,0 +1,12 @@
+timestamp,local_time,city,continent,temp,humidity,description
+1769029616,2026-01-21 22:06:56,Paris,Europe,9.91,79,clear sky
+1769029936,2026-01-21 21:12:16,London,Europe,9.51,88,moderate rain
+1769030437,2026-01-22 05:20:37,Hong Kong,Asia,11.67,70,broken clouds
+1769030437,2026-01-22 06:20:37,Tokyo,Asia,0.44,51,few clouds
+1769030438,2026-01-21 22:20:38,Abuja,Africa,25.24,44,clear sky
+1769030439,2026-01-21 22:20:39,Rabat,Africa,14.37,77,light rain
+1769030439,2026-01-21 18:20:39,Buenos Aires,South America,27.55,43,clear sky
+1769030441,2026-01-21 18:20:41,Rio de Janeiro,South America,21.77,94,overcast clouds
+1769029985,2026-01-21 16:13:05,New York,North America,1.02,58,clear sky
+1769030443,2026-01-21 13:20:43,Los Angeles,North America,18.74,64,haze
+1769030443,2026-01-22 08:20:43,Sydney,Oceania,20.38,77,scattered clouds
