@@ -2119,3 +2119,43 @@ timestamp,local_time,city,country,continent,temp,humidity,description
 1769267652,2026-01-24 15:14:12,Reykjavik,Iceland,Europe,3.77,56,broken clouds
 1769267652,2026-01-24 05:14:12,Honolulu,USA,Oceania,22.01,81,light rain
 1769267652,2026-01-24 17:14:12,Cape Town,South Africa,Africa,24.99,52,clear sky
+1769271044,2026-01-24 11:10:44,New York,USA,North America,-10.71,41,clear sky
+1769270969,2026-01-24 08:09:29,Los Angeles,USA,North America,13.73,87,overcast clouds
+1769271291,2026-01-24 08:14:51,San Francisco,USA,North America,8.48,86,few clouds
+1769271101,2026-01-24 11:11:41,Toronto,Canada,North America,-12.79,73,broken clouds
+1769271139,2026-01-24 10:12:19,Mexico City,Mexico,North America,15.5,36,few clouds
+1769270878,2026-01-24 16:07:58,London,UK,Europe,8.38,77,broken clouds
+1769270967,2026-01-24 17:09:27,Paris,France,Europe,9.08,70,clear sky
+1769271426,2026-01-24 17:17:06,Berlin,Germany,Europe,-1.81,85,overcast clouds
+1769271426,2026-01-24 17:17:06,Amsterdam,Netherlands,Europe,4.67,72,clear sky
+1769271426,2026-01-24 17:17:06,Zurich,Switzerland,Europe,2.74,92,mist
+1769271303,2026-01-24 17:15:03,Madrid,Spain,Europe,6.27,64,scattered clouds
+1769271426,2026-01-24 17:17:06,Rome,Italy,Europe,13.84,83,broken clouds
+1769271427,2026-01-24 18:17:07,Athens,Greece,Europe,14.11,81,few clouds
+1769271427,2026-01-24 17:17:07,Ljubljana,Slovenia,Europe,2.91,96,mist
+1769271427,2026-01-24 17:17:07,Zagreb,Croatia,Europe,5.92,86,moderate rain
+1769271427,2026-01-25 01:17:07,Tokyo,Japan,Asia,2.44,58,clear sky
+1769271427,2026-01-25 00:17:07,Hong Kong,China,Asia,16.37,80,clear sky
+1769271239,2026-01-25 00:13:59,Singapore,Singapore,Asia,25.72,80,broken clouds
+1769271427,2026-01-25 01:17:07,Seoul,South Korea,Asia,-8.24,53,clear sky
+1769271427,2026-01-25 00:17:07,Shanghai,China,Asia,5.88,65,clear sky
+1769271151,2026-01-24 21:42:31,Mumbai,India,Asia,24.03,60,haze
+1769271427,2026-01-24 23:17:07,Bangkok,Thailand,Asia,26.4,52,clear sky
+1769271007,2026-01-24 20:10:07,Dubai,UAE,Asia,21.01,46,clear sky
+1769271428,2026-01-24 18:17:08,Tel Aviv,Israel,Asia,16.9,61,clear sky
+1769271428,2026-01-24 17:17:08,Abuja,Nigeria,Africa,35.42,18,broken clouds
+1769271428,2026-01-24 17:17:08,Rabat,Morocco,Africa,15.37,63,broken clouds
+1769271428,2026-01-24 18:17:08,Cairo,Egypt,Africa,19.33,20,clear sky
+1769271106,2026-01-24 18:11:46,Johannesburg,South Africa,Africa,27.39,27,broken clouds
+1769271428,2026-01-24 19:17:08,Nairobi,Kenya,Africa,23.1,36,overcast clouds
+1769271022,2026-01-24 13:10:22,Buenos Aires,Argentina,South America,28.83,59,clear sky
+1769271128,2026-01-24 13:12:08,Rio de Janeiro,Brazil,South America,24.97,86,haze
+1769271423,2026-01-24 13:17:03,Santiago,Chile,South America,27.37,43,broken clouds
+1769271297,2026-01-24 11:14:57,Bogota,Colombia,South America,16.17,77,broken clouds
+1769271321,2026-01-24 11:15:21,Lima,Peru,South America,25.21,69,clear sky
+1769271012,2026-01-25 03:10:12,Sydney,Australia,Oceania,20.5,92,scattered clouds
+1769271429,2026-01-25 03:17:09,Melbourne,Australia,Oceania,23.5,48,scattered clouds
+1769271429,2026-01-25 05:17:09,Auckland,New Zealand,Oceania,15.51,66,scattered clouds
+1769271429,2026-01-24 16:17:09,Reykjavik,Iceland,Europe,4.77,52,light rain
+1769271310,2026-01-24 06:15:10,Honolulu,USA,Oceania,21.12,84,scattered clouds
+1769271313,2026-01-24 18:15:13,Cape Town,South Africa,Africa,24.02,59,clear sky
