@@ -1,99 +1,264 @@
+import streamlit as st
+import pandas as pd
 import requests
-import csv
+import json
 import os
+import seaborn as sns
+import matplotlib.pyplot as plt
 from datetime import datetime, timedelta, timezone
 
+# --- CONFIG & PROFESSIONAL STYLING ---
+st.set_page_config(page_title="Business Weather Pro", layout="wide")
 
-def run_weather_logger():
-    api_key = os.getenv("WEATHER_API_KEY")
-    if not api_key:
-        print("Error: WEATHER_API_KEY not found.")
-        return
+st.markdown("""
+    <style>
+    a.header-anchor { display: none !important; }
+    .viewerBadge_container__1QS1n { display: none; }
+    .block-container { padding-top: 1rem !important; }
+    .data-label { font-weight: bold; color: #555; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 2px; }
+    .data-value { font-size: 1.1rem; color: #111; margin-bottom: 10px; }
+    </style>
+""", unsafe_allow_html=True)
 
-    # רשימת 40 ערים בפריסה עולמית
-    cities = [
-        # צפון אמריקה
-        {"name": "New York", "lat": 40.7128, "lon": -74.0060, "continent": "North America", "country": "USA"},
-        {"name": "Los Angeles", "lat": 34.0522, "lon": -118.2437, "continent": "North America", "country": "USA"},
-        {"name": "San Francisco", "lat": 37.7749, "lon": -122.4194, "continent": "North America", "country": "USA"},
-        {"name": "Toronto", "lat": 43.6532, "lon": -79.3832, "continent": "North America", "country": "Canada"},
-        {"name": "Mexico City", "lat": 19.4326, "lon": -99.1332, "continent": "North America", "country": "Mexico"},
-        # אירופה
-        {"name": "London", "lat": 51.5074, "lon": -0.1278, "continent": "Europe", "country": "UK"},
-        {"name": "Paris", "lat": 48.8566, "lon": 2.3522, "continent": "Europe", "country": "France"},
-        {"name": "Berlin", "lat": 52.5200, "lon": 13.4050, "continent": "Europe", "country": "Germany"},
-        {"name": "Amsterdam", "lat": 52.3676, "lon": 4.9041, "continent": "Europe", "country": "Netherlands"},
-        {"name": "Zurich", "lat": 47.3769, "lon": 8.5417, "continent": "Europe", "country": "Switzerland"},
-        {"name": "Madrid", "lat": 40.4168, "lon": -3.7038, "continent": "Europe", "country": "Spain"},
-        {"name": "Rome", "lat": 41.9028, "lon": 12.4964, "continent": "Europe", "country": "Italy"},
-        {"name": "Athens", "lat": 37.9838, "lon": 23.7275, "continent": "Europe", "country": "Greece"},
-        {"name": "Ljubljana", "lat": 46.0569, "lon": 14.5058, "continent": "Europe", "country": "Slovenia"},
-        {"name": "Zagreb", "lat": 45.8150, "lon": 15.9819, "continent": "Europe", "country": "Croatia"},
-        # אסיה
-        {"name": "Tokyo", "lat": 35.6762, "lon": 139.6503, "continent": "Asia", "country": "Japan"},
-        {"name": "Hong Kong", "lat": 22.3193, "lon": 114.1694, "continent": "Asia", "country": "China"},
-        {"name": "Singapore", "lat": 1.3521, "lon": 103.8198, "continent": "Asia", "country": "Singapore"},
-        {"name": "Seoul", "lat": 37.5665, "lon": 126.9780, "continent": "Asia", "country": "South Korea"},
-        {"name": "Shanghai", "lat": 31.2304, "lon": 121.4737, "continent": "Asia", "country": "China"},
-        {"name": "Mumbai", "lat": 19.0760, "lon": 72.8777, "continent": "Asia", "country": "India"},
-        {"name": "Bangkok", "lat": 13.7563, "lon": 100.5018, "continent": "Asia", "country": "Thailand"},
-        {"name": "Dubai", "lat": 25.2048, "lon": 55.2708, "continent": "Asia", "country": "UAE"},
-        {"name": "Tel Aviv", "lat": 32.0853, "lon": 34.7818, "continent": "Asia", "country": "Israel"},
-        # אפריקה
-        {"name": "Abuja", "lat": 9.0765, "lon": 7.3986, "continent": "Africa", "country": "Nigeria"},
-        {"name": "Rabat", "lat": 34.0209, "lon": -6.8416, "continent": "Africa", "country": "Morocco"},
-        {"name": "Cairo", "lat": 30.0444, "lon": 31.2357, "continent": "Africa", "country": "Egypt"},
-        {"name": "Johannesburg", "lat": -26.2041, "lon": 28.0473, "continent": "Africa", "country": "South Africa"},
-        {"name": "Nairobi", "lat": -1.2921, "lon": 36.8219, "continent": "Africa", "country": "Kenya"},
-        # דרום אמריקה
-        {"name": "Buenos Aires", "lat": -34.6037, "lon": -58.3816, "continent": "South America",
-         "country": "Argentina"},
-        {"name": "Rio de Janeiro", "lat": -22.9068, "lon": -43.1729, "continent": "South America", "country": "Brazil"},
-        {"name": "Santiago", "lat": -33.4489, "lon": -70.6693, "continent": "South America", "country": "Chile"},
-        {"name": "Bogota", "lat": 4.7110, "lon": -74.0721, "continent": "South America", "country": "Colombia"},
-        {"name": "Lima", "lat": -12.0464, "lon": -77.0428, "continent": "South America", "country": "Peru"},
-        # אוקיאניה
-        {"name": "Sydney", "lat": -33.8688, "lon": 151.2093, "continent": "Oceania", "country": "Australia"},
-        {"name": "Melbourne", "lat": -37.8136, "lon": 144.9631, "continent": "Oceania", "country": "Australia"},
-        {"name": "Auckland", "lat": -36.8485, "lon": 174.7633, "continent": "Oceania", "country": "New Zealand"},
-        # יעדים נוספים ואיים
-        {"name": "Reykjavik", "lat": 64.1265, "lon": -21.8174, "continent": "Europe", "country": "Iceland"},
-        {"name": "Honolulu", "lat": 21.3069, "lon": -157.8583, "continent": "Oceania", "country": "USA"},
-        {"name": "Cape Town", "lat": -33.9249, "lon": 18.4241, "continent": "Africa", "country": "South Africa"}
-    ]
-
-    fieldnames = ['timestamp', 'local_time', 'city', 'country', 'continent', 'temp', 'humidity', 'description']
-    file_exists = os.path.isfile('weather_data.csv')
-
-    with open('weather_data.csv', mode='a', newline='', encoding='utf-8') as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        if not file_exists:
-            writer.writeheader()
-
-        for city in cities:
-            url = f"https://api.openweathermap.org/data/2.5/weather?lat={city['lat']}&lon={city['lon']}&units=metric&lang=en&appid={api_key}"
-            try:
-                response = requests.get(url)
-                response.raise_for_status()
-                data = response.json()
-
-                weather_row = {
-                    'timestamp': data.get('dt'),
-                    'local_time': (datetime.fromtimestamp(data.get('dt'), timezone.utc).replace(tzinfo=None) +
-                                   timedelta(seconds=data.get('timezone'))).strftime('%Y-%m-%d %H:%M:%S'),
-                    'city': city['name'],
-                    'country': city['country'],  # הוספת המדינה לשורה
-                    'continent': city['continent'],
-                    'temp': data['main']['temp'],
-                    'humidity': data['main']['humidity'],
-                    'description': data['weather'][0]['description']
-                }
-                writer.writerow(weather_row)
-            except Exception as e:
-                print(f"Failed for {city['name']}: {e}")
-
-    print(f"Logged data for {len(cities)} cities successfully.")
+# --- SETTINGS & PERSISTENCE ---
+SETTINGS_FILE = "settings.json"
 
 
-if __name__ == "__main__":
-    run_weather_logger()
+def load_settings():
+    if os.path.exists(SETTINGS_FILE):
+        with open(SETTINGS_FILE, 'r') as f: return json.load(f)
+    return {"favorites": [], "default_city": "New York", "units": "metric"}
+
+
+def save_settings(settings):
+    with open(SETTINGS_FILE, 'w') as f: json.dump(settings, f)
+
+
+if 'settings' not in st.session_state: st.session_state.settings = load_settings()
+if 'active_city' not in st.session_state: st.session_state.active_city = st.session_state.settings.get("default_city")
+
+# --- API & DATA SOURCES ---
+API_KEY = st.secrets["WEATHER_API_KEY"]
+CSV_URL = "https://raw.githubusercontent.com/erezgrn3112-stack/weather_automation/main/weather_data.csv"
+
+
+def fetch_weather(city, units):
+    url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&units={units}&appid={API_KEY}"
+    r = requests.get(url)
+    return r.json() if r.status_code == 200 else None
+
+
+def fetch_forecast(city, units):
+    url = f"https://api.openweathermap.org/data/2.5/forecast?q={city}&units={units}&appid={API_KEY}"
+    r = requests.get(url)
+    return r.json() if r.status_code == 200 else None
+
+
+@st.cache_data(show_spinner=False)
+def load_historical(): return pd.read_csv(CSV_URL)
+
+
+# --- SIDEBAR & NAVIGATION ---
+with st.sidebar:
+    st.title("📌 Saved Destinations")
+    if st.session_state.settings["favorites"]:
+        for fav in st.session_state.settings["favorites"]:
+            if st.button(f"📍 {fav}", key=f"nav_{fav}", use_container_width=True):
+                st.session_state.active_city = fav;
+                st.rerun()
+    st.divider()
+    if st.button("Clear All Favorites"):
+        st.session_state.settings["favorites"] = [];
+        save_settings(st.session_state.settings);
+        st.rerun()
+
+st.title("Business Travel Control Center")
+df_raw = load_historical()
+
+if not df_raw.empty:
+    st.subheader("Choose Your Next Destination")
+    c1, c2, c3, c4 = st.columns([1, 1, 1, 1])
+    with c1:
+        cont = st.selectbox("Continent", df_raw['continent'].unique())
+    with c2:
+        country = st.selectbox("Country", df_raw[df_raw['continent'] == cont]['country'].unique())
+    with c3:
+        city_option = st.selectbox("City", df_raw[df_raw['country'] == country]['city'].unique())
+    with c4:
+        st.markdown('<div style="padding-top: 28px;"></div>', unsafe_allow_html=True)
+        if st.button("Show Weather", use_container_width=True): st.session_state.active_city = city_option
+
+# --- MAIN DISPLAY ---
+if st.session_state.active_city:
+    active = st.session_state.active_city
+    data = fetch_weather(active, st.session_state.settings["units"])
+
+    if data:
+        st.divider()
+        is_f = st.session_state.settings["units"] == "imperial"
+        unit_sym = "°F" if is_f else "°C"
+        current_temp = round(data['main']['temp'])
+
+        # זמן מקומי מדויק
+        tz_offset = timedelta(seconds=data['timezone'])
+        dt_now = datetime.now(timezone.utc) + tz_offset
+        dt_now = dt_now.replace(tzinfo=None)  # לצורך השוואת Pandas
+
+        col_main, col_map = st.columns([1.5, 1])
+        with col_main:
+            icon_url = f"https://openweathermap.org/img/wn/{data['weather'][0]['icon']}@2x.png"
+            c_icon, c_text = st.columns([1, 5])
+            with c_icon:
+                st.image(icon_url, width=100)
+            with c_text:
+                st.markdown(f"## {active}: {dt_now.strftime('%H:%M')} | {current_temp}{unit_sym}")
+                st.markdown(
+                    f'<div class="data-label">Date:</div><div class="data-value">{dt_now.strftime("%A, %B %d, %Y")}</div>',
+                    unsafe_allow_html=True)
+                st.markdown(
+                    f'<div class="data-label">Conditions:</div><div class="data-value">{data["weather"][0]["description"].capitalize()}</div>',
+                    unsafe_allow_html=True)
+
+            c_unit, c_fav, c_def = st.columns(3)
+            with c_unit:
+                if st.button(f"Switch to {'°C' if is_f else '°F'}", use_container_width=True):
+                    st.session_state.settings["units"] = "metric" if is_f else "imperial";
+                    save_settings(st.session_state.settings);
+                    st.rerun()
+            with c_fav:
+                if active in st.session_state.settings["favorites"]:
+                    st.write("✅ In Your List")
+                    if st.button("🗑️ Remove", use_container_width=True):
+                        st.session_state.settings["favorites"].remove(active);
+                        save_settings(st.session_state.settings);
+                        st.rerun()
+                else:
+                    if st.button("⭐ Save to List", use_container_width=True):
+                        st.session_state.settings["favorites"].append(active);
+                        save_settings(st.session_state.settings);
+                        st.rerun()
+            with c_def:
+                if st.button("🏠 Set Default", use_container_width=True):
+                    st.session_state.settings["default_city"] = active;
+                    save_settings(st.session_state.settings);
+                    st.success("Home Set")
+
+            st.markdown("---")
+            st.subheader("🎒 Packing Essentials")
+            temp_c = data['main']['temp'] if not is_f else (data['main']['temp'] - 32) * 5 / 9
+            items = ["Laptop & Charger", "Business Passport", "Local Currency"]
+            if temp_c < 15:
+                items += ["Heavy Coat", "Warm Scarf"]
+            elif temp_c > 25:
+                items += ["Sunscreen", "Light Business Wear"]
+            else:
+                items += ["Light Blazer", "Comfortable Walking Shoes"]
+            for item in items: st.markdown(f"- {item}")
+
+        with col_map:
+            st.subheader("Destination Map")
+            map_df = pd.DataFrame({'lat': [data['coord']['lat']], 'lon': [data['coord']['lon']]})
+            st.map(map_df, zoom=10)
+
+        # --- GRAPH SECTION: SYMMETRICAL DYNAMIC WINDOWS ---
+        st.divider()
+        hist = df_raw[df_raw['city'] == active].copy()
+
+        # 1. HISTORICAL TRENDS (PAST)
+        st.subheader("📊 Weather Trend Analysis (Past)")
+        if len(hist) > 1:
+            hist['local_time'] = pd.to_datetime(hist['local_time']).dt.tz_localize(None)
+            if is_f: hist['temp'] = (hist['temp'] * 9 / 5) + 32
+            hist['temp'] = hist['temp'].round()
+
+            g1_c1, g1_c2 = st.columns(2)
+
+            with g1_c1:
+                last_7_days = hist[hist['local_time'] > (dt_now - timedelta(days=7))].copy()
+                if not last_7_days.empty:
+                    weekly_avg = last_7_days.set_index('local_time').resample('D').mean(
+                        numeric_only=True).round().reset_index()
+                    weekly_avg['day_index'] = range(len(weekly_avg))
+                    lm_weekly = sns.lmplot(data=weekly_avg, x='day_index', y='temp', height=4, aspect=1.3,
+                                           scatter_kws={'s': 50}, line_kws={'color': 'red'})
+                    lm_weekly.set(title="7-Day Historical Average")
+                    lm_weekly.set_axis_labels("Date", f"Temp ({unit_sym})")
+                    plt.xlim(weekly_avg['day_index'].min() - 0.5, weekly_avg['day_index'].max() + 0.5)
+                    plt.xticks(weekly_avg['day_index'], weekly_avg['local_time'].dt.strftime('%b %d'))
+                    st.pyplot(lm_weekly.fig)
+
+            with g1_c2:
+                # 24-Hour Past Pulse (Dynamic Window)
+                past_24h = hist[hist['local_time'] > (dt_now - timedelta(hours=24))].copy()
+                if not past_24h.empty:
+                    min_t = past_24h['local_time'].min()
+                    max_t = past_24h['local_time'].max()
+                    past_24h['rel_hour'] = (past_24h['local_time'] - min_t).dt.total_seconds() / 3600
+                    lm_h_past = sns.lmplot(data=past_24h, x='rel_hour', y='temp', height=4, aspect=1.3,
+                                           scatter_kws={'s': 40, 'alpha': 0.7}, line_kws={'color': 'orange'})
+                    lm_h_past.set(title="Last 24-Hour Pulse")
+                    lm_h_past.set_axis_labels("Time", f"Temp ({unit_sym})")
+
+                    # לוגיקה לשעות עגולות (00, 06, 12, 18)
+                    p_ticks = []
+                    for day in [min_t.date(), (min_t + timedelta(days=1)).date()]:
+                        for h in [0, 6, 12, 18]:
+                            p_ticks.append(datetime.combine(day, datetime.min.time().replace(hour=h)))
+                    p_final = sorted([t for t in p_ticks if min_t <= t <= max_t])
+
+                    plt.xticks([(t - min_t).total_seconds() / 3600 for t in p_final],
+                               [t.strftime('%H:00') for t in p_final])
+                    plt.xlim(-0.5, past_24h['rel_hour'].max() + 0.5)
+                    st.pyplot(lm_h_past.fig)
+
+        # 2. FORECAST TRENDS (FUTURE)
+        st.divider()
+        st.subheader("🔮 Future Forecast Analysis")
+        f_data = fetch_forecast(active, st.session_state.settings["units"])
+
+        if f_data:
+            # המרת תחזית לזמן מקומי (UTC -> Local)
+            f_tz_offset = timedelta(seconds=f_data['city']['timezone'])
+            f_list = []
+            for entry in f_data['list']:
+                f_dt = (pd.to_datetime(entry['dt_txt']) + f_tz_offset).replace(tzinfo=None)
+                f_list.append({'dt': f_dt, 'temp': round(entry['main']['temp'])})
+            df_f = pd.DataFrame(f_list)
+
+            g2_c1, g2_c2 = st.columns(2)
+
+            with g2_c1:
+                f_weekly_avg = df_f.set_index('dt').resample('D').mean(numeric_only=True).round().reset_index()
+                f_weekly_avg['day_index'] = range(len(f_weekly_avg))
+                lm_f_weekly = sns.lmplot(data=f_weekly_avg, x='day_index', y='temp', height=4, aspect=1.3,
+                                         scatter_kws={'s': 50}, line_kws={'color': 'green'})
+                lm_f_weekly.set(title="Upcoming 5-Day Average")
+                lm_f_weekly.set_axis_labels("Date", f"Temp ({unit_sym})")
+                plt.xlim(f_weekly_avg['day_index'].min() - 0.5, f_weekly_avg['day_index'].max() + 0.5)
+                plt.xticks(f_weekly_avg['day_index'], f_weekly_avg['dt'].dt.strftime('%b %d'))
+                st.pyplot(lm_f_weekly.fig)
+
+            with g2_c2:
+                # 24-Hour Forecast Pulse (Dynamic Alignment)
+                f_24h = df_f.head(8).copy()
+                f_min_t = f_24h['dt'].min()
+                f_max_t = f_24h['dt'].max()
+                f_24h['rel_hour'] = (f_24h['dt'] - f_min_t).dt.total_seconds() / 3600
+                lm_f_24 = sns.lmplot(data=f_24h, x='rel_hour', y='temp', height=4, aspect=1.3, scatter_kws={'s': 40},
+                                     line_kws={'color': 'blue'})
+                lm_f_24.set(title="Upcoming 24-Hour Forecast")
+                lm_f_24.set_axis_labels("Time", f"Temp ({unit_sym})")
+
+                # לוגיקה לשעות עגולות בתחזית (00, 06, 12, 18)
+                f_ticks = []
+                for day in [f_min_t.date(), (f_min_t + timedelta(days=1)).date()]:
+                    for h in [0, 6, 12, 18]:
+                        f_ticks.append(datetime.combine(day, datetime.min.time().replace(hour=h)))
+                f_final = sorted([t for t in f_ticks if f_min_t <= t <= f_max_t])
+
+                plt.xticks([(t - f_min_t).total_seconds() / 3600 for t in f_final],
+                           [t.strftime('%H:00') for t in f_final])
+                plt.xlim(-0.5, f_24h['rel_hour'].max() + 0.5)
+                st.pyplot(lm_f_24.fig)
+        else:
+            st.warning("Forecast data is currently unavailable.")

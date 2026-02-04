@@ -28,7 +28,7 @@ jobs:
         env:
           # כאן אנחנו מחברים את המפתח שהגדרת ב-Secrets לקוד
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
-        run: poetry run python main.py
+        run: poetry run python weather_logger.py
 
       - name: Commit and Push Results
         run: |
