@@ -3,7 +3,7 @@
 A professional-grade weather analysis dashboard designed for business travelers. This system combines real-time weather monitoring with historical trend analysis using a robust automated data pipeline.
 
 ## 🚀 Live Demo
-**[Insert your Streamlit link here]** *(Example: https://weather-automation-erez.streamlit.app/)*
+https://erezgrn3112-stack-weather-automation-main-ovnfmh.streamlit.app/
 
 ## 📋 Project Description
 This project provides a comprehensive "Control Center" for 40 major global destinations. It is built to help business travelers make data-driven decisions regarding packing and scheduling by analyzing long-term climate patterns alongside real-time updates.
