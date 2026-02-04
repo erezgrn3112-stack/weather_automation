@@ -27,7 +27,7 @@ def run_weather_logger():
         {"name": "Athens", "lat": 37.9838, "lon": 23.7275, "continent": "Europe", "country": "Greece"},
         {"name": "Ljubljana", "lat": 46.0569, "lon": 14.5058, "continent": "Europe", "country": "Slovenia"},
         {"name": "Zagreb", "lat": 45.8150, "lon": 15.9819, "continent": "Europe", "country": "Croatia"},
-        {"name": "Tokyo", "lat": 35.6762, "lat": 139.6503, "continent": "Asia", "country": "Japan"},
+        {"name": "Tokyo", "lat": 35.6762, "lon": 139.6503, "continent": "Asia", "country": "Japan"},
         {"name": "Hong Kong", "lat": 22.3193, "lon": 114.1694, "continent": "Asia", "country": "China"},
         {"name": "Singapore", "lat": 1.3521, "lon": 103.8198, "continent": "Asia", "country": "Singapore"},
         {"name": "Seoul", "lat": 37.5665, "lon": 126.9780, "continent": "Asia", "country": "South Korea"},
