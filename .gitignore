@@ -1,0 +1,17 @@
+# Python environment
+.venv/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+
+# Streamlit & Secrets
+.streamlit/
+secrets.toml
+
+# Local data & settings
+settings.json
+.DS_Store
+
+# IDE settings
+.idea/
