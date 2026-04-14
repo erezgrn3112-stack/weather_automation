@@ -64794,3 +64794,43 @@ timestamp,local_time,city,country,continent,temp,humidity,description
 1776131685,2026-04-14 01:54:45,Reykjavik,Iceland,Europe,3.76,76,overcast clouds
 1776131438,2026-04-13 15:50:38,Honolulu,USA,Oceania,24.73,75,overcast clouds
 1776131685,2026-04-14 03:54:45,Cape Town,South Africa,Africa,18.08,82,clear sky
+1776141613,2026-04-14 00:40:13,New York,USA,North America,18.6,72,clear sky
+1776141658,2026-04-13 21:40:58,Los Angeles,USA,North America,13.05,67,broken clouds
+1776141471,2026-04-13 21:37:51,San Francisco,USA,North America,11.28,81,clear sky
+1776141328,2026-04-14 00:35:28,Toronto,Canada,North America,15.97,89,overcast clouds
+1776141381,2026-04-13 22:36:21,Mexico City,Mexico,North America,18.81,42,light rain
+1776141377,2026-04-14 05:36:17,London,UK,Europe,3.58,90,clear sky
+1776141643,2026-04-14 06:40:43,Paris,France,Europe,3.64,90,clear sky
+1776141413,2026-04-14 06:36:53,Berlin,Germany,Europe,8.63,65,overcast clouds
+1776141362,2026-04-14 06:36:02,Amsterdam,Netherlands,Europe,4.21,91,clear sky
+1776141659,2026-04-14 06:40:59,Zurich,Switzerland,Europe,7.51,96,overcast clouds
+1776141528,2026-04-14 06:38:48,Madrid,Spain,Europe,8.83,72,clear sky
+1776141443,2026-04-14 06:37:23,Rome,Italy,Europe,13.87,88,broken clouds
+1776141434,2026-04-14 07:37:14,Athens,Greece,Europe,13.97,67,overcast clouds
+1776141659,2026-04-14 06:40:59,Ljubljana,Slovenia,Europe,10.86,86,overcast clouds
+1776141659,2026-04-14 06:40:59,Zagreb,Croatia,Europe,9.98,78,moderate rain
+1776141659,2026-04-14 13:40:59,Tokyo,Japan,Asia,23.43,38,broken clouds
+1776141508,2026-04-14 12:38:28,Hong Kong,China,Asia,28.95,75,broken clouds
+1776141599,2026-04-14 12:39:59,Singapore,Singapore,Asia,33,63,broken clouds
+1776141660,2026-04-14 13:41:00,Seoul,South Korea,Asia,25.6,22,overcast clouds
+1776141643,2026-04-14 12:40:43,Shanghai,China,Asia,15.95,92,overcast clouds
+1776141318,2026-04-14 10:05:18,Mumbai,India,Asia,31.99,50,clear sky
+1776141600,2026-04-14 11:40:00,Bangkok,Thailand,Asia,36.44,44,clear sky
+1776141436,2026-04-14 08:37:16,Dubai,UAE,Asia,24.86,63,broken clouds
+1776141646,2026-04-14 07:40:46,Tel Aviv,Israel,Asia,16.76,58,clear sky
+1776141660,2026-04-14 05:41:00,Abuja,Nigeria,Africa,25.16,80,overcast clouds
+1776141660,2026-04-14 05:41:00,Rabat,Morocco,Africa,12.27,80,few clouds
+1776141660,2026-04-14 06:41:00,Cairo,Egypt,Africa,16.89,67,clear sky
+1776141661,2026-04-14 06:41:01,Johannesburg,South Africa,Africa,12.9,89,light rain
+1776141524,2026-04-14 07:38:44,Nairobi,Kenya,Africa,16.71,95,light rain
+1776141437,2026-04-14 01:37:17,Buenos Aires,Argentina,South America,19.58,81,overcast clouds
+1776141480,2026-04-14 01:38:00,Rio de Janeiro,Brazil,South America,22.91,83,overcast clouds
+1776141486,2026-04-14 00:38:06,Santiago,Chile,South America,19.19,52,clear sky
+1776141661,2026-04-13 23:41:01,Bogota,Colombia,South America,11.94,95,overcast clouds
+1776141465,2026-04-13 23:37:45,Lima,Peru,South America,21.96,81,clear sky
+1776141622,2026-04-14 14:40:22,Sydney,Australia,Oceania,24.21,49,clear sky
+1776141440,2026-04-14 14:37:20,Melbourne,Australia,Oceania,18.97,64,overcast clouds
+1776141661,2026-04-14 16:41:01,Auckland,New Zealand,Oceania,15.87,87,overcast clouds
+1776141662,2026-04-14 04:41:02,Reykjavik,Iceland,Europe,3.27,71,overcast clouds
+1776141662,2026-04-13 18:41:02,Honolulu,USA,Oceania,24.3,81,overcast clouds
+1776141395,2026-04-14 06:36:35,Cape Town,South Africa,Africa,17.6,82,clear sky
