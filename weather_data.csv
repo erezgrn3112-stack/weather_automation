@@ -65154,3 +65154,43 @@ timestamp,local_time,city,country,continent,temp,humidity,description
 1776189930,2026-04-14 18:05:30,Reykjavik,Iceland,Europe,5.77,81,light intensity shower rain
 1776189602,2026-04-14 08:00:02,Honolulu,USA,Oceania,24.32,86,scattered clouds
 1776189930,2026-04-14 20:05:30,Cape Town,South Africa,Africa,19.4,83,light rain
+1776196270,2026-04-14 15:51:10,New York,USA,North America,28.62,42,clear sky
+1776196122,2026-04-14 12:48:42,Los Angeles,USA,North America,21.02,53,clear sky
+1776196357,2026-04-14 12:52:37,San Francisco,USA,North America,15.72,63,broken clouds
+1776196574,2026-04-14 15:56:14,Toronto,Canada,North America,21.08,59,clear sky
+1776196668,2026-04-14 13:57:48,Mexico City,Mexico,North America,25.5,16,few clouds
+1776196251,2026-04-14 20:50:51,London,UK,Europe,13.89,64,broken clouds
+1776196837,2026-04-14 22:00:37,Paris,France,Europe,12.87,53,clear sky
+1776196801,2026-04-14 22:00:01,Berlin,Germany,Europe,10.09,80,clear sky
+1776196837,2026-04-14 22:00:37,Amsterdam,Netherlands,Europe,9.97,70,clear sky
+1776196837,2026-04-14 22:00:37,Zurich,Switzerland,Europe,9.82,85,overcast clouds
+1776196837,2026-04-14 22:00:37,Madrid,Spain,Europe,16.99,46,clear sky
+1776196837,2026-04-14 22:00:37,Rome,Italy,Europe,15.67,86,broken clouds
+1776196838,2026-04-14 23:00:38,Athens,Greece,Europe,16.12,79,few clouds
+1776196838,2026-04-14 22:00:38,Ljubljana,Slovenia,Europe,10.39,95,overcast clouds
+1776196838,2026-04-14 22:00:38,Zagreb,Croatia,Europe,12.59,84,overcast clouds
+1776196833,2026-04-15 05:00:33,Tokyo,Japan,Asia,15.57,92,broken clouds
+1776196838,2026-04-15 04:00:38,Hong Kong,China,Asia,24.83,84,scattered clouds
+1776196838,2026-04-15 04:00:38,Singapore,Singapore,Asia,27.27,88,broken clouds
+1776196838,2026-04-15 05:00:38,Seoul,South Korea,Asia,9.76,81,scattered clouds
+1776196838,2026-04-15 04:00:38,Shanghai,China,Asia,14.88,94,broken clouds
+1776196691,2026-04-15 01:28:11,Mumbai,India,Asia,28,83,haze
+1776196553,2026-04-15 02:55:53,Bangkok,Thailand,Asia,28.95,77,clear sky
+1776196758,2026-04-14 23:59:18,Dubai,UAE,Asia,23.65,73,scattered clouds
+1776196839,2026-04-14 23:00:39,Tel Aviv,Israel,Asia,21.13,50,clear sky
+1776196839,2026-04-14 21:00:39,Abuja,Nigeria,Africa,25.81,67,moderate rain
+1776196839,2026-04-14 21:00:39,Rabat,Morocco,Africa,15.37,77,scattered clouds
+1776196715,2026-04-14 21:58:35,Cairo,Egypt,Africa,20.33,45,overcast clouds
+1776196840,2026-04-14 22:00:40,Johannesburg,South Africa,Africa,12.97,87,broken clouds
+1776196840,2026-04-14 23:00:40,Nairobi,Kenya,Africa,15.71,82,clear sky
+1776196840,2026-04-14 17:00:40,Buenos Aires,Argentina,South America,23.67,79,clear sky
+1776196840,2026-04-14 17:00:40,Rio de Janeiro,Brazil,South America,26.88,72,few clouds
+1776196840,2026-04-14 16:00:40,Santiago,Chile,South America,19.27,60,scattered clouds
+1776196840,2026-04-14 15:00:40,Bogota,Colombia,South America,16.82,80,broken clouds
+1776196840,2026-04-14 15:00:40,Lima,Peru,South America,25.21,61,clear sky
+1776196841,2026-04-15 06:00:41,Sydney,Australia,Oceania,12,89,clear sky
+1776196335,2026-04-15 05:52:15,Melbourne,Australia,Oceania,12.92,84,overcast clouds
+1776196841,2026-04-15 08:00:41,Auckland,New Zealand,Oceania,14.92,40,scattered clouds
+1776196841,2026-04-14 20:00:41,Reykjavik,Iceland,Europe,5.77,79,heavy intensity rain
+1776196841,2026-04-14 10:00:41,Honolulu,USA,Oceania,26.48,80,broken clouds
+1776196841,2026-04-14 22:00:41,Cape Town,South Africa,Africa,17.97,89,light rain
