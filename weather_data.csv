@@ -77594,3 +77594,43 @@ timestamp,local_time,city,country,continent,temp,humidity,description
 1777975342,2026-05-05 10:02:22,Reykjavik,Iceland,Europe,1.77,51,broken clouds
 1777975058,2026-05-04 23:57:38,Honolulu,USA,Oceania,23.42,78,few clouds
 1777975342,2026-05-05 12:02:22,Cape Town,South Africa,Africa,17.62,69,few clouds
+1777982034,2026-05-05 07:53:54,New York,USA,North America,16.3,69,overcast clouds
+1777982139,2026-05-05 04:55:39,Los Angeles,USA,North America,13.59,77,overcast clouds
+1777981800,2026-05-05 04:50:00,San Francisco,USA,North America,11.45,81,overcast clouds
+1777982095,2026-05-05 07:54:55,Toronto,Canada,North America,15.2,76,overcast clouds
+1777981990,2026-05-05 05:53:10,Mexico City,Mexico,North America,18.83,52,scattered clouds
+1777981967,2026-05-05 12:52:47,London,UK,Europe,16.79,53,overcast clouds
+1777982140,2026-05-05 13:55:40,Paris,France,Europe,14.39,89,mist
+1777982028,2026-05-05 13:53:48,Berlin,Germany,Europe,19.08,73,few clouds
+1777982140,2026-05-05 13:55:40,Amsterdam,Netherlands,Europe,14.16,65,few clouds
+1777982140,2026-05-05 13:55:40,Zurich,Switzerland,Europe,16.3,80,scattered clouds
+1777982040,2026-05-05 13:54:00,Madrid,Spain,Europe,16.47,41,scattered clouds
+1777981930,2026-05-05 13:52:10,Rome,Italy,Europe,19.08,59,broken clouds
+1777981694,2026-05-05 14:48:14,Athens,Greece,Europe,24.24,33,clear sky
+1777981997,2026-05-05 13:53:17,Ljubljana,Slovenia,Europe,16.59,65,overcast clouds
+1777982140,2026-05-05 13:55:40,Zagreb,Croatia,Europe,20.69,49,clear sky
+1777982140,2026-05-05 20:55:40,Tokyo,Japan,Asia,16.97,56,clear sky
+1777982095,2026-05-05 19:54:55,Hong Kong,China,Asia,21.17,93,overcast clouds
+1777982140,2026-05-05 19:55:40,Singapore,Singapore,Asia,24.86,94,moderate rain
+1777982140,2026-05-05 20:55:40,Seoul,South Korea,Asia,13.76,47,clear sky
+1777982071,2026-05-05 19:54:31,Shanghai,China,Asia,21.88,53,clear sky
+1777982140,2026-05-05 17:25:40,Mumbai,India,Asia,32,62,haze
+1777981707,2026-05-05 18:48:27,Bangkok,Thailand,Asia,33.95,52,few clouds
+1777981916,2026-05-05 15:51:56,Dubai,UAE,Asia,35.01,46,clear sky
+1777982088,2026-05-05 14:54:48,Tel Aviv,Israel,Asia,21.13,46,light rain
+1777982141,2026-05-05 12:55:41,Abuja,Nigeria,Africa,36.19,35,broken clouds
+1777982141,2026-05-05 12:55:41,Rabat,Morocco,Africa,20.37,56,scattered clouds
+1777982041,2026-05-05 14:54:01,Cairo,Egypt,Africa,22.33,26,scattered clouds
+1777982141,2026-05-05 13:55:41,Johannesburg,South Africa,Africa,17.41,85,overcast clouds
+1777982141,2026-05-05 14:55:41,Nairobi,Kenya,Africa,23.02,56,light rain
+1777981707,2026-05-05 08:48:27,Buenos Aires,Argentina,South America,16.29,87,overcast clouds
+1777981970,2026-05-05 08:52:50,Rio de Janeiro,Brazil,South America,24.75,81,few clouds
+1777982141,2026-05-05 07:55:41,Santiago,Chile,South America,18.77,41,overcast clouds
+1777981843,2026-05-05 06:50:43,Bogota,Colombia,South America,11.48,98,scattered clouds
+1777982141,2026-05-05 06:55:41,Lima,Peru,South America,19.21,88,few clouds
+1777982141,2026-05-05 21:55:41,Sydney,Australia,Oceania,14.39,79,clear sky
+1777982141,2026-05-05 21:55:41,Melbourne,Australia,Oceania,15.12,74,overcast clouds
+1777982141,2026-05-05 23:55:41,Auckland,New Zealand,Oceania,16.36,57,light rain
+1777982141,2026-05-05 11:55:41,Reykjavik,Iceland,Europe,3.77,45,broken clouds
+1777982116,2026-05-05 01:55:16,Honolulu,USA,Oceania,22.62,84,moderate rain
+1777982141,2026-05-05 13:55:41,Cape Town,South Africa,Africa,18.8,60,scattered clouds
