@@ -102354,3 +102354,31 @@ timestamp,local_time,city,country,continent,temp,humidity,description
 1783513044,2026-07-08 12:17:24,Reykjavik,Iceland,Europe,10.76,79,overcast clouds
 1783512819,2026-07-08 02:13:39,Honolulu,USA,Oceania,23.74,79,broken clouds
 1783513044,2026-07-08 14:17:24,Cape Town,South Africa,Africa,19.23,72,scattered clouds
+1783525222,2026-07-08 18:40:22,Athens,Greece,Europe,29.78,51,broken clouds
+1783525223,2026-07-08 17:40:23,Ljubljana,Slovenia,Europe,24.48,74,overcast clouds
+1783525224,2026-07-08 17:40:24,Zagreb,Croatia,Europe,25.37,50,overcast clouds
+1783525226,2026-07-09 00:40:26,Tokyo,Japan,Asia,24.2,79,overcast clouds
+1783525227,2026-07-08 23:40:27,Hong Kong,China,Asia,29.39,80,few clouds
+1783525228,2026-07-08 23:40:28,Singapore,Singapore,Asia,28.99,84,broken clouds
+1783525230,2026-07-09 00:40:30,Seoul,South Korea,Asia,24.2,92,broken clouds
+1783525231,2026-07-08 23:40:31,Shanghai,China,Asia,28.48,80,overcast clouds
+1783525232,2026-07-08 21:10:32,Mumbai,India,Asia,28.62,83,overcast clouds
+1783525223,2026-07-08 22:40:23,Bangkok,Thailand,Asia,27.48,75,broken clouds
+1783525232,2026-07-08 19:40:32,Dubai,UAE,Asia,32.08,75,few clouds
+1783525233,2026-07-08 18:40:33,Tel Aviv,Israel,Asia,27.3,69,clear sky
+1783525233,2026-07-08 16:40:33,Abuja,Nigeria,Africa,27.94,77,light rain
+1783525234,2026-07-08 16:40:34,Rabat,Morocco,Africa,26.65,59,clear sky
+1783525203,2026-07-08 18:40:03,Cairo,Egypt,Africa,32.92,33,clear sky
+1783525235,2026-07-08 17:40:35,Johannesburg,South Africa,Africa,15.01,39,clear sky
+1783525235,2026-07-08 18:40:35,Nairobi,Kenya,Africa,19.73,57,broken clouds
+1783525217,2026-07-08 12:40:17,Buenos Aires,Argentina,South America,15.61,56,scattered clouds
+1783525200,2026-07-08 12:40:00,Rio de Janeiro,Brazil,South America,24.12,76,broken clouds
+1783525194,2026-07-08 11:39:54,Santiago,Chile,South America,18.03,29,overcast clouds
+1783525206,2026-07-08 10:40:06,Bogota,Colombia,South America,12.17,83,overcast clouds
+1783525236,2026-07-08 10:40:36,Lima,Peru,South America,21.67,85,scattered clouds
+1783525236,2026-07-09 01:40:36,Sydney,Australia,Oceania,11.43,76,light rain
+1783525196,2026-07-09 01:39:56,Melbourne,Australia,Oceania,5.37,92,overcast clouds
+1783525237,2026-07-09 03:40:37,Auckland,New Zealand,Oceania,10.04,40,clear sky
+1783525237,2026-07-08 15:40:37,Reykjavik,Iceland,Europe,11.5,75,overcast clouds
+1783525198,2026-07-08 05:39:58,Honolulu,USA,Oceania,23.42,80,light rain
+1783525196,2026-07-08 17:39:56,Cape Town,South Africa,Africa,17.07,82,broken clouds
