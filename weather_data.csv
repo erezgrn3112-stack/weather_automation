@@ -141782,3 +141782,43 @@ timestamp,local_time,city,country,continent,temp,humidity,description
 1790922629,2026-10-02 06:30:29,Reykjavik,Iceland,Europe,8.77,93,overcast clouds
 1790922000,2026-10-01 20:20:00,Honolulu,USA,Oceania,26.07,85,broken clouds
 1790922344,2026-10-02 08:25:44,Cape Town,South Africa,Africa,15.7,77,overcast clouds
+1790947363,2026-10-02 09:22:43,New York,USA,North America,21.55,81,broken clouds
+1790947038,2026-10-02 06:17:18,Los Angeles,USA,North America,20.15,89,clear sky
+1790947418,2026-10-02 06:23:38,San Francisco,USA,North America,13.62,83,overcast clouds
+1790946956,2026-10-02 09:15:56,Toronto,Canada,North America,11.99,89,overcast clouds
+1790947455,2026-10-02 07:24:15,Mexico City,Mexico,North America,15.51,87,overcast clouds
+1790947455,2026-10-02 14:24:15,London,UK,Europe,20.88,52,few clouds
+1790947455,2026-10-02 15:24:15,Paris,France,Europe,21.72,43,broken clouds
+1790947455,2026-10-02 15:24:15,Berlin,Germany,Europe,17.13,80,overcast clouds
+1790947455,2026-10-02 15:24:15,Amsterdam,Netherlands,Europe,19.95,66,scattered clouds
+1790947170,2026-10-02 15:19:30,Zurich,Switzerland,Europe,21.3,63,broken clouds
+1790947455,2026-10-02 15:24:15,Madrid,Spain,Europe,23.01,64,few clouds
+1790947455,2026-10-02 15:24:15,Rome,Italy,Europe,26,49,overcast clouds
+1790947455,2026-10-02 16:24:15,Athens,Greece,Europe,20.22,52,scattered clouds
+1790947455,2026-10-02 15:24:15,Ljubljana,Slovenia,Europe,21.4,41,overcast clouds
+1790947455,2026-10-02 15:24:15,Zagreb,Croatia,Europe,25.37,27,overcast clouds
+1790947455,2026-10-02 22:24:15,Tokyo,Japan,Asia,19.73,77,light rain
+1790947455,2026-10-02 21:24:15,Hong Kong,China,Asia,29.36,80,light rain
+1790947455,2026-10-02 21:24:15,Singapore,Singapore,Asia,28.84,84,overcast clouds
+1790947455,2026-10-02 22:24:15,Seoul,South Korea,Asia,13.76,58,clear sky
+1790947455,2026-10-02 21:24:15,Shanghai,China,Asia,22.12,68,light rain
+1790947455,2026-10-02 18:54:15,Mumbai,India,Asia,34,49,few clouds
+1790947419,2026-10-02 20:23:39,Bangkok,Thailand,Asia,28.77,82,heavy intensity rain
+1790947347,2026-10-02 17:22:27,Dubai,UAE,Asia,37.01,44,clear sky
+1790947456,2026-10-02 16:24:16,Tel Aviv,Israel,Asia,28.49,43,overcast clouds
+1790947456,2026-10-02 14:24:16,Abuja,Nigeria,Africa,26.5,82,moderate rain
+1790947456,2026-10-02 13:24:16,Rabat,Morocco,Africa,26.37,65,scattered clouds
+1790947456,2026-10-02 16:24:16,Cairo,Egypt,Africa,30.33,25,broken clouds
+1790947456,2026-10-02 15:24:16,Johannesburg,South Africa,Africa,19.86,50,clear sky
+1790947295,2026-10-02 16:21:35,Nairobi,Kenya,Africa,26.76,23,overcast clouds
+1790947456,2026-10-02 10:24:16,Buenos Aires,Argentina,South America,14.09,70,broken clouds
+1790947456,2026-10-02 10:24:16,Rio de Janeiro,Brazil,South America,23.42,89,light rain
+1790947200,2026-10-02 10:20:00,Santiago,Chile,South America,16.15,61,light rain
+1790947456,2026-10-02 08:24:16,Bogota,Colombia,South America,13.71,99,overcast clouds
+1790947456,2026-10-02 08:24:16,Lima,Peru,South America,22.21,78,overcast clouds
+1790947202,2026-10-02 23:20:02,Sydney,Australia,Oceania,18.49,79,light rain
+1790947456,2026-10-02 23:24:16,Melbourne,Australia,Oceania,13.74,88,overcast clouds
+1790947202,2026-10-03 02:20:02,Auckland,New Zealand,Oceania,12.12,61,scattered clouds
+1790947456,2026-10-02 13:24:16,Reykjavik,Iceland,Europe,9.77,71,overcast clouds
+1790947285,2026-10-02 03:21:25,Honolulu,USA,Oceania,24.6,85,light rain
+1790947456,2026-10-02 15:24:16,Cape Town,South Africa,Africa,18.74,71,light rain
